@@ -1,0 +1,4 @@
+1. Linear Layout adalah jenis layout dimana user menempatkan 1 objek per baris atau kolom secara
+    sejajar. Jadi di dalam setiap baris atau kolom hanya ada 1 objek yang bisa ditempatkan .
+2. ConstraintLayout memungkinkan Anda membuat tata letak yang kompleks dan besar dengan hierarki
+    tampilan datar (tidak ada kelompok tampilan bertingkat).
