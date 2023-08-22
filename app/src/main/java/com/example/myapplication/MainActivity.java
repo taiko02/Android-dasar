@@ -1,11 +1,12 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
-import java.util.ArrayList;
-import java.util.List;
+import androidx.appcompat.app.AppCompatActivity;
 
 // AppCompatActivity : class di android framework  yang menjelaskan activity apa
 // dan mewarisi dari class itu untuk mengambil behavior/perilaku
@@ -15,26 +16,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
-//  untuk mencari error bisa menggunakan logcat dibawah dekt profiler
-//  VERBOSE: Ini adalah tingkat log paling rendah dan digunakan untuk mencatat detail yang sangat
-//  rinci. Pesan log ini biasanya digunakan selama tahap debugging intensif dan mungkin mencakup
-//  informasi seperti nilai variabel, aliran eksekusi, dll.
-//
-//  DEBUG: Tingkat log ini digunakan untuk pesan log yang membantu dalam proses debugging. Ini mencakup
-//  informasi yang bermanfaat saat mengidentifikasi masalah dan memahami alur eksekusi.
-//
-//  INFO: Pesan log pada tingkat ini memberikan informasi umum tentang alur kerja aplikasi. Ini bisa
-//  mencakup tindakan-tindakan yang dilakukan oleh aplikasi atau kejadian-kejadian penting.
-//
-//  WARN: Pesan log tingkat ini menunjukkan kondisi yang mungkin menyebabkan masalah di masa depan,
-//  tetapi aplikasi masih dapat berjalan. Ini mungkin termasuk peringatan tentang penggunaan yang tidak efisien atau kondisi tidak diharapkan.
-//
-//  ERROR: Ini adalah tingkat log yang menunjukkan situasi yang mengindikasikan kesalahan dalam aplikasi.
-//  Pesan log ini menunjukkan bahwa sesuatu telah salah dan perlu diperbaiki.
-//
-//  ASSERT: Tingkat log ini paling tinggi dan digunakan untuk situasi di mana pemrogram berpendapat
-//  bahwa kondisi yang seharusnya tidak pernah terjadi telah terjadi. Biasanya digunakan dalam pemeriksaan
-//  yang sangat penting untuk memastikan aplikasi beroperasi dengan benar.
+        // contoh penggunaan dari view ke main file
+        // Tipe data nya sesuaikan tipe di xml nya
+        Button btnApply = findViewById(R.id.btnApply);
+        btnApply.setOnClickListener(new View.OnClickListener() {
+            private final EditText firstName = findViewById(R.id.etFirstName);
+            private final EditText lastName = findViewById(R.id.etLastName);
+            private final EditText birthDay = findViewById(R.id.etBirthDay);
+            private final EditText country = findViewById(R.id.etCountry);
+
+            @Override
+            public void onClick(View v) {
+                // mencetak ke console
+                Log.d("Main activity", "First name " + firstName.getText().toString() +
+                        " " + lastName.getText().toString() + ", " +
+                        "born on : " + birthDay.getText().toString() +
+                        ", from " + country.getText().toString());
+            }
+        });
+    }
 }
