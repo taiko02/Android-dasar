@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -20,12 +19,9 @@ public class MainActivity extends AppCompatActivity {
         Button buttonCount = findViewById(R.id.btnCount);
         TextView tvCount = findViewById(R.id.tvCount);
 
-        buttonCount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                count[0]++;
-                tvCount.setText("lets count new together : " + count[0]);
-            }
+        buttonCount.setOnClickListener(v -> {
+            count[0]++;
+            tvCount.setText("lets count new together : " + count[0]);
         });
     }
 }
