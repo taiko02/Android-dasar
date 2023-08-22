@@ -2,3 +2,7 @@
     sejajar. Jadi di dalam setiap baris atau kolom hanya ada 1 objek yang bisa ditempatkan .
 2. ConstraintLayout memungkinkan Anda membuat tata letak yang kompleks dan besar dengan hierarki
     tampilan datar (tidak ada kelompok tampilan bertingkat).
+
+3. Chains dan guideline : di layout editing design ada tool yang sangat membantu proses pengembangan
+seperti align yang otomatis menghubungkan ke parent secara vertical/horizontal
+lalu ada chain (ketika klik kanan)dengan fungsi yang sama dan ada Add helpers yang memberikan guide line
