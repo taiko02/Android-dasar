@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,13 +16,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Integer[] count = {0};
-        Button buttonCount = findViewById(R.id.btnCount);
-        TextView tvCount = findViewById(R.id.tvCount);
+        Button btnAdd = findViewById(R.id.btnAdd);
 
-        buttonCount.setOnClickListener(v -> {
-            count[0]++;
-            tvCount.setText("lets count new together : " + count[0]);
+        btnAdd.setOnClickListener(v -> {
+            EditText firstNumber = findViewById(R.id.etFirsNumber);
+            EditText secondNumber = findViewById(R.id.etSecondNumber);
+            TextView tvResult = findViewById(R.id.tvResult);
+            // ParseInt artinya kita mengubah semua value dari EditText lalu di konversi kan ke bilangan bulat.  contoh : "45" -> 45
+            Integer result = Integer.parseInt(firstNumber.getText().toString()) + Integer.parseInt(secondNumber.getText().toString());
+
+            tvResult.setText(result.toString());
         });
     }
 }
