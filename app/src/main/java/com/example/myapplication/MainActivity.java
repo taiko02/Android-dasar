@@ -1,9 +1,10 @@
 package com.example.myapplication;
 
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,21 +12,19 @@ import androidx.appcompat.app.AppCompatActivity;
 // dan mewarisi dari class itu untuk mengambil behavior/perilaku
 public class MainActivity extends AppCompatActivity {
 
+
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnAdd = findViewById(R.id.btnAdd);
+        Button btnAddImage = findViewById(R.id.btnAddImage);
 
-        btnAdd.setOnClickListener(v -> {
-            EditText firstNumber = findViewById(R.id.etFirsNumber);
-            EditText secondNumber = findViewById(R.id.etSecondNumber);
-            TextView tvResult = findViewById(R.id.tvResult);
-            // ParseInt artinya kita mengubah semua value dari EditText lalu di konversi kan ke bilangan bulat.  contoh : "45" -> 45
-            Integer result = Integer.parseInt(firstNumber.getText().toString()) + Integer.parseInt(secondNumber.getText().toString());
+        btnAddImage.setOnClickListener(v -> {
+            ImageView ivImage = findViewById(R.id.ivImage);
 
-            tvResult.setText(result.toString());
+            ivImage.setImageResource(R.drawable.fotos);
         });
     }
 }
