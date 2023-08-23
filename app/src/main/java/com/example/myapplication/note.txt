@@ -6,3 +6,9 @@
 3. Chains dan guideline : di layout editing design ada tool yang sangat membantu proses pengembangan
 seperti align yang otomatis menghubungkan ke parent secara vertical/horizontal
 lalu ada chain (ketika klik kanan)dengan fungsi yang sama dan ada Add helpers yang memberikan guide line
+
+4. View Binding : View binding adalah fitur yang memudahkan Anda menulis kode yang berinteraksi dengan
+tampilan. Setelah diaktifkan dalam sebuah modul, view binding akan menghasilkan class binding untuk
+setiap file tata letak XML yang ada dalam modul tersebut. Instance class binding berisi referensi langsung
+ke semua tampilan yang memiliki ID di tata letak yang terkait.
+Pada umumnya, view binding menggantikan findViewById.
