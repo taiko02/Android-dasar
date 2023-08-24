@@ -2,8 +2,10 @@ package com.example.myapplication;
 
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.RadioButton;
+import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,19 +25,21 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        binding.btnOrder.setOnClickListener(v -> {
-            int checkMeatRadioButtonId = binding.rgMeat.getCheckedRadioButtonId();
-            RadioButton meat = findViewById(checkMeatRadioButtonId);
-            boolean cheese = binding.cbCheese.isChecked();
-            boolean onion = binding.cbOnion.isChecked();
-            boolean salad = binding.cbSalad.isChecked();
-            String orderSting = "Your order burger with : \n " +
-                    meat.getText() +
-                    (cheese ? "\nCheese" : "") +
-                    (onion ? "\nOnion" : "") +
-                    (salad ? "\nSalad" : "");
-            binding.tvOrder.setText(orderSting);
+        binding.showToast.setOnClickListener(v -> {
+            // NORMAL TOAST
+            //Toast.makeText(getApplicationContext(), "Hi iam toast", Toast.LENGTH_LONG).show();
 
+            // CUSTOM TOAST
+            // Membuat instance LayoutInflater
+            LayoutInflater li = getLayoutInflater();
+            // Mendapatkan objek View seperti yang ditentukan dalam file custom_toast.xml
+            View layout = li.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.clToast));
+
+            // membuat toast object
+            Toast toast = new Toast(getApplicationContext());
+            toast.setDuration(Toast.LENGTH_LONG);
+            toast.setView(layout);
+            toast.show();
         });
     }
 }
