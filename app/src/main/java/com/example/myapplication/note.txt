@@ -4,28 +4,35 @@
     tampilan datar (tidak ada kelompok tampilan bertingkat).
 
 3. Chains dan guideline : di layout editing design ada tool yang sangat membantu proses pengembangan
-seperti align yang otomatis menghubungkan ke parent secara vertical/horizontal
-lalu ada chain (ketika klik kanan)dengan fungsi yang sama dan ada Add helpers yang memberikan guide line
+    seperti align yang otomatis menghubungkan ke parent secara vertical/horizontal
+    lalu ada chain (ketika klik kanan)dengan fungsi yang sama dan ada Add helpers yang memberikan guide line
 
 4. View Binding : View binding adalah fitur yang memudahkan Anda menulis kode yang berinteraksi dengan
-tampilan. Setelah diaktifkan dalam sebuah modul, view binding akan menghasilkan class binding untuk
-setiap file tata letak XML yang ada dalam modul tersebut. Instance class binding berisi referensi langsung
-ke semua tampilan yang memiliki ID di tata letak yang terkait.
-Pada umumnya, view binding menggantikan findViewById.
+    tampilan. Setelah diaktifkan dalam sebuah modul, view binding akan menghasilkan class binding untuk
+    setiap file tata letak XML yang ada dalam modul tersebut. Instance class binding berisi referensi langsung
+    ke semua tampilan yang memiliki ID di tata letak yang terkait.
+    Pada umumnya, view binding menggantikan findViewById.
 
 5. Context : context adalah Sebuah Context memberikan akses informasi atas application state.
-Ia memperbolehkan Activity, Fragment, dan Service untuk mengakses file, gambar, theme/style, dan lokasi direktori eksternal.
-Context juga memberikan akses ke service yang terpasang di Android yang akan digunakan misalnya untuk
-layout inflation, keyboard, dan mencari content provider.
-Objek Context adalah bagian penting dalam kerangka kerja Android karena digunakan untuk:
+   Ia memperbolehkan Activity, Fragment, dan Service untuk mengakses file, gambar, theme/style, dan lokasi direktori eksternal.
+   Context juga memberikan akses ke service yang terpasang di Android yang akan digunakan misalnya untuk
+   layout inflation, keyboard, dan mencari content provider.
+   Objek Context adalah bagian penting dalam kerangka kerja Android karena digunakan untuk:
 
-1. Mengakses Sumber Daya: Objek Context memungkinkan Anda untuk mengakses berbagai jenis sumber daya
-aplikasi seperti string, drawable, layout, dan lainnya. Ini berguna saat Anda ingin menampilkan teks
-atau gambar pada antarmuka pengguna.
-2. Mengelola Aktivitas Aplikasi: Melalui Context, Anda dapat memulai aktivitas baru, memulai layanan
-latar belakang, atau menghentikan komponen aplikasi lainnya.
-3. Mengakses Database: Anda dapat menggunakan Context untuk mengakses database SQLite yang digunakan dalam aplikasi Anda.
-4. Mengelola Preferensi Aplikasi: Objek Context juga memungkinkan Anda untuk mengelola preferensi aplikasi,
-seperti menyimpan data konfigurasi atau pengaturan.
-5. Mengakses Layanan Sistem: Beberapa layanan sistem Android juga memerlukan Context untuk diakses,
-seperti mengakses manajer lokasi atau sistem notifikasi.
+    1. Mengakses Sumber Daya: Objek Context memungkinkan Anda untuk mengakses berbagai jenis sumber daya
+    aplikasi seperti string, drawable, layout, dan lainnya. Ini berguna saat Anda ingin menampilkan teks
+    atau gambar pada antarmuka pengguna.
+    2. Mengelola Aktivitas Aplikasi: Melalui Context, Anda dapat memulai aktivitas baru, memulai layanan
+    latar belakang, atau menghentikan komponen aplikasi lainnya.
+    3. Mengakses Database: Anda dapat menggunakan Context untuk mengakses database SQLite yang digunakan dalam aplikasi Anda.
+    4. Mengelola Preferensi Aplikasi: Objek Context juga memungkinkan Anda untuk mengelola preferensi aplikasi,
+    seperti menyimpan data konfigurasi atau pengaturan.
+    5. Mengakses Layanan Sistem: Beberapa layanan sistem Android juga memerlukan Context untuk diakses,
+    seperti mengakses manajer lokasi atau sistem notifikasi.
+
+6. Intents dan memulai activity : Dalam konteks pengembangan aplikasi Android, "intent" mengacu
+   pada objek yang digunakan untuk berkomunikasi antara komponen aplikasi,
+   seperti aktivitas/Activity, layanan/Service, dan penerima siaran (broadcast receivers).
+
+   Cara cepat membuat activity : klik kana pada nama package root mainActivity -> new -> activity ->
+                                pilih activity -> setup -> done (cara ini lebih cepat)
