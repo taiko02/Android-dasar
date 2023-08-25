@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -23,6 +24,11 @@ public class SecondActivity extends AppCompatActivity {
 
         binding.btBack.setOnClickListener(v -> {
             finish(); // digunakan untuk mengakhiri atau menghancurkan acivity saat ini.
+        });
+
+        binding.btnNextActivity.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ThirdActivity.class);
+            startActivity(intent);
         });
     }
 }

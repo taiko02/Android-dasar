@@ -33,3 +33,6 @@
 6. Intents dan memulai activity : Dalam konteks pengembangan aplikasi Android, "intent" mengacu
    pada objek yang digunakan untuk berkomunikasi antara komponen aplikasi,
    seperti aktivitas/Activity, layanan/Service, dan penerima siaran (broadcast receivers).
+
+   Cara cepat membuat activity : klik kana pada nama package root mainActivity -> new -> activity ->
+                                pilih activity -> setup -> done (cara ini lebih cepat)
